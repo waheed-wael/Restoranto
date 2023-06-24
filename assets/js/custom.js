@@ -1,30 +1,30 @@
-(function ($) {
+(function () {
 	
 	"use strict";
 
-	$(window).scroll(function() {
-	  var scroll = $(window).scrollTop();
-	  var box = $('.header-text').height();
-	  var header = $('header').height();
+	(window).scroll(function() {
+	  var scroll = (window).scrollTop();
+	  var box = ('.header-text').height();
+	  var header = ('header').height();
 
 	  if (scroll >= box - header) {
-	    $("header").addClass("background-header");
+	    ("header").addClass("background-header");
 	  } else {
-	    $("header").removeClass("background-header");
+	    ("header").removeClass("background-header");
 	  }
 	});
 	
-	$('.filters ul li').click(function(){
-        $('.filters ul li').removeClass('active');
-        $(this).addClass('active');
+	('.filters ul li').click(function(){
+        ('.filters ul li').removeClass('active');
+        (this).addClass('active');
           
-          var data = $(this).attr('data-filter');
-          $grid.isotope({
+          var data = (this).attr('data-filter');
+          grid.isotope({
             filter: data
           })
         });
 
-        var $grid = $(".grid").isotope({
+        var grid = (".grid").isotope({
           itemSelector: ".all",
           percentPosition: true,
           masonry: {
@@ -141,12 +141,12 @@
 	})()
 
 	var context;
-	var $window = $(window);
+	var window = (window);
 
 	// run this right away to set context
-	if ($window.width() <= 768) {
+	if (window.width() <= 768) {
 		context = 'small';
-	} else if (768 < $window.width() < 970) {
+	} else if (768 < window.width() < 970) {
 		context = 'medium';
 	} else {
 		context = 'large';
@@ -154,67 +154,67 @@
 
 	// refresh the page only if you're crossing into a context
 	// that isn't already set
-	$(window).resize(function() {
-		if(($window.width() <= 768) && (context != 'small')) {
+	(window).resize(function() {
+		if((window.width() <= 768) && (context != 'small')) {
 			//refresh the page
 			location.reload();
-		} else if ((768 < $window.width()  < 970) && (context != 'medium')) {
+		} else if ((768 < window.width()  < 970) && (context != 'medium')) {
 			location.reload();
 		} else if (context != 'large') {
 			location.reload();
 		}
 	});
 
-	$("#modal_trigger").leanModal({
+	("#modal_trigger").leanModal({
 		top: 100,
 		overlay: 0.6,
 		closeButton: ".modal_close"
 	});
 
-	$(function() {
+	(function() {
 		// Calling Login Form
-		$("#login_form").click(function() {
-			$(".social_login").hide();
-			$(".user_login").show();
+		("#login_form").click(function() {
+			(".social_login").hide();
+			(".user_login").show();
 			return false;
 		});
 
 		// Calling Register Form
-		$("#register_form").click(function() {
-			$(".social_login").hide();
-			$(".user_register").show();
-			$(".header_title").text('Register');
+		("#register_form").click(function() {
+			(".social_login").hide();
+			(".user_register").show();
+			(".header_title").text('Register');
 			return false;
 		});
 
 		// Going back to Social Forms
-		$(".back_btn").click(function() {
-			$(".user_login").hide();
-			$(".user_register").hide();
-			$(".social_login").show();
-			$(".header_title").text('Login');
+		(".back_btn").click(function() {
+			(".user_login").hide();
+			(".user_register").hide();
+			(".social_login").show();
+			(".header_title").text('Login');
 			return false;
 		});
 	});
 
-	$(document).on("click", ".naccs .menu div", function() {
-		var numberIndex = $(this).index();
+	(document).on("click", ".naccs .menu div", function() {
+		var numberIndex = (this).index();
 	
-		if (!$(this).is("active")) {
-			$(".naccs .menu div").removeClass("active");
-			$(".naccs ul li").removeClass("active");
+		if (!(this).is("active")) {
+			(".naccs .menu div").removeClass("active");
+			(".naccs ul li").removeClass("active");
 	
-			$(this).addClass("active");
-			$(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
+			(this).addClass("active");
+			(".naccs ul").find("li:eq(" + numberIndex + ")").addClass("active");
 	
-			var listItemHeight = $(".naccs ul")
+			var listItemHeight = (".naccs ul")
 				.find("li:eq(" + numberIndex + ")")
 				.innerHeight();
-			$(".naccs ul").height(listItemHeight + "px");
+			(".naccs ul").height(listItemHeight + "px");
 		}
 	});
 
-	$('.owl-testimonials').owlCarousel({
+	('.owl-testimonials').owlCarousel({
 		items:1,
 		loop:true,
 		dots: true,
@@ -234,7 +234,7 @@
 		  }
 	  })
 
-	$('.owl-features').owlCarousel({
+	('.owl-features').owlCarousel({
 		items:3,
 		loop:true,
 		dots: true,
@@ -257,26 +257,26 @@
 	
 
 	// Menu Dropdown Toggle
-	if($('.menu-trigger').length){
-		$(".menu-trigger").on('click', function() {	
-			$(this).toggleClass('active');
-			$('.header-area .nav').slideToggle(200);
+	if(('.menu-trigger').length){
+		(".menu-trigger").on('click', function() {	
+			(this).toggleClass('active');
+			('.header-area .nav').slideToggle(200);
 		});
 	}
 
 
 	// Menu elevator animation
-	$('.scroll-to-section a[href*=\\#]:not([href=\\#])').on('click', function() {
+	('.scroll-to-section a[href*=\\#]:not([href=\\#])').on('click', function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			var target = $(this.hash);
-			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			var target = (this.hash);
+			target = target.length ? target : ('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
-				var width = $(window).width();
+				var width = (window).width();
 				if(width < 991) {
-					$('.menu-trigger').removeClass('active');
-					$('.header-area .nav').slideUp(200);	
+					('.menu-trigger').removeClass('active');
+					('.header-area .nav').slideUp(200);	
 				}				
-				$('html,body').animate({
+				('html,body').animate({
 					scrollTop: (target.offset().top) - 80
 				}, 700);
 				return false;
@@ -284,38 +284,38 @@
 		}
 	});
 
-	$(document).ready(function () {
-	    $(document).on("scroll", onScroll);
+	(document).ready(function () {
+	    (document).on("scroll", onScroll);
 	    
 	    //smoothscroll
-	    $('.scroll-to-section a[href^="#"]').on('click', function (e) {
+	    ('.scroll-to-section a[href^="#"]').on('click', function (e) {
 	        e.preventDefault();
-	        $(document).off("scroll");
+	        (document).off("scroll");
 	        
-	        $('.scroll-to-section a').each(function () {
-	            $(this).removeClass('active');
+	        ('.scroll-to-section a').each(function () {
+	            (this).removeClass('active');
 	        })
-	        $(this).addClass('active');
+	        (this).addClass('active');
 	      
 	        var target = this.hash,
 	        menu = target;
-	       	var target = $(this.hash);
-	        $('html, body').stop().animate({
+	       	var target = (this.hash);
+	        ('html, body').stop().animate({
 	            scrollTop: (target.offset().top) - 79
 	        }, 500, 'swing', function () {
 	            window.location.hash = target;
-	            $(document).on("scroll", onScroll);
+	            (document).on("scroll", onScroll);
 	        });
 	    });
 	});
 
 	function onScroll(event){
-	    var scrollPos = $(document).scrollTop();
-	    $('.nav a').each(function () {
-	        var currLink = $(this);
-	        var refElement = $(currLink.attr("href"));
+	    var scrollPos = (document).scrollTop();
+	    ('.nav a').each(function () {
+	        var currLink = (this);
+	        var refElement = (currLink.attr("href"));
 	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	            $('.nav ul li a').removeClass("active");
+	            ('.nav ul li a').removeClass("active");
 	            currLink.addClass("active");
 	        }
 	        else{
@@ -326,31 +326,31 @@
 
 
 	// Page loading animation
-	$(window).on('load', function() {
-		if($('.cover').length){
-			$('.cover').parallax({
-				imageSrc: $('.cover').data('image'),
+	(window).on('load', function() {
+		if(('.cover').length){
+			('.cover').parallax({
+				imageSrc: ('.cover').data('image'),
 				zIndex: '1'
 			});
 		}
 
-		$("#preloader").animate({
+		("#preloader").animate({
 			'opacity': '0'
 		}, 600, function(){
 			setTimeout(function(){
-				$("#preloader").css("visibility", "hidden").fadeOut();
+				("#preloader").css("visibility", "hidden").fadeOut();
 			}, 300);
 		});
 	});
 
 	
 
-	const dropdownOpener = $('.main-nav ul.nav .has-sub > a');
+	const dropdownOpener = ('.main-nav ul.nav .has-sub > a');
 
     // Open/Close Submenus
     if (dropdownOpener.length) {
         dropdownOpener.each(function () {
-            var _this = $(this);
+            var _this = (this);
 
             _this.on('tap click', function (e) {
                 var thisItemParent = _this.parent('li'),
@@ -384,36 +384,36 @@
 
 
 	function visible(partial) {
-        var $t = partial,
-            $w = jQuery(window),
-            viewTop = $w.scrollTop(),
-            viewBottom = viewTop + $w.height(),
-            _top = $t.offset().top,
-            _bottom = _top + $t.height(),
+        var t = partial,
+            w = jQuery(window),
+            viewTop = w.scrollTop(),
+            viewBottom = viewTop + w.height(),
+            _top = t.offset().top,
+            _bottom = _top + t.height(),
             compareTop = partial === true ? _bottom : _top,
             compareBottom = partial === true ? _top : _bottom;
 
-        return ((compareBottom <= viewBottom) && (compareTop >= viewTop) && $t.is(':visible'));
+        return ((compareBottom <= viewBottom) && (compareTop >= viewTop) && t.is(':visible'));
 
     }
 
-    $(window).scroll(function() {
+    (window).scroll(function() {
 
-        if (visible($('.count-digit'))) {
-            if ($('.count-digit').hasClass('counter-loaded')) return;
-            $('.count-digit').addClass('counter-loaded');
+        if (visible(('.count-digit'))) {
+            if (('.count-digit').hasClass('counter-loaded')) return;
+            ('.count-digit').addClass('counter-loaded');
 
-            $('.count-digit').each(function() {
-                var $this = $(this);
+            ('.count-digit').each(function() {
+                var this = (this);
                 jQuery({
                     Counter: 0
                 }).animate({
-                    Counter: $this.text()
+                    Counter: this.text()
                 }, {
                     duration: 3000,
                     easing: 'swing',
                     step: function() {
-                        $this.text(Math.ceil(this.Counter));
+                        this.text(Math.ceil(this.Counter));
                     }
                 });
             });

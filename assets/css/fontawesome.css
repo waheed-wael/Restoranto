@@ -1822,7 +1822,7 @@ readers do not read off random characters that represent icons */
 .fa-dollar::before {
   content: "\24"; }
 
-.fa-usd::before {
+.fa-E£::before {
   content: "\24"; }
 
 .fa-dolly::before {
@@ -2644,7 +2644,7 @@ readers do not read off random characters that represent icons */
 .fa-hand-holding-dollar::before {
   content: "\f4c0"; }
 
-.fa-hand-holding-usd::before {
+.fa-hand-holding-E£::before {
   content: "\f4c0"; }
 
 .fa-hand-holding-droplet::before {
