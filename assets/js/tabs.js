@@ -40,7 +40,7 @@ $.extend( $.ui, {
 		END: 35,
 		ENTER: 13,
 		ESCAPE: 27,
-		المنزل: 36,
+		HOME: 36,
 		LEFT: 37,
 		PAGE_DOWN: 34,
 		PAGE_UP: 33,
@@ -1740,7 +1740,7 @@ var accordion = $.widget( "ui.accordion", {
 			case keyCode.ENTER:
 				this._eventHandler( event );
 				break;
-			case keyCode.المنزل:
+			case keyCode.HOME:
 				toFocus = this.headers[ 0 ];
 				break;
 			case keyCode.END:
@@ -2301,7 +2301,7 @@ var menu = $.widget( "ui.menu", {
 		case $.ui.keyCode.PAGE_DOWN:
 			this.nextPage( event );
 			break;
-		case $.ui.keyCode.المنزل:
+		case $.ui.keyCode.HOME:
 			this._move( "first", "first", event );
 			break;
 		case $.ui.keyCode.END:
@@ -4371,7 +4371,7 @@ $.extend(Datepicker.prototype, {
 							$.datepicker._gotoToday(event.target);
 						}
 						handled = event.ctrlKey || event.metaKey;
-						break; // current on ctrl or command +المنزل
+						break; // current on ctrl or command +home
 				case 37: if (event.ctrlKey || event.metaKey) {
 							$.datepicker._adjustDate(event.target, (isRTL ? +1 : -1), "D");
 						}
@@ -4408,7 +4408,7 @@ $.extend(Datepicker.prototype, {
 						break; // +1 week on ctrl or command +down
 				default: handled = false;
 			}
-		} else if (event.keyCode === 36 && event.ctrlKey) { // display the date picker on ctrl+المنزل
+		} else if (event.keyCode === 36 && event.ctrlKey) { // display the date picker on ctrl+home
 			$.datepicker._showDatepicker(this);
 		} else {
 			handled = false;
@@ -6284,7 +6284,7 @@ $.widget("ui.draggable", $.ui.mouse, {
 
 	_setContainment: function() {
 
-		var isالمستخدمينcrollable, c, ce,
+		var isUserScrollable, c, ce,
 			o = this.options,
 			document = this.document[ 0 ];
 
@@ -6331,18 +6331,18 @@ $.widget("ui.draggable", $.ui.mouse, {
 			return;
 		}
 
-		isالمستخدمينcrollable = /(scroll|auto)/.test( c.css( "overflow" ) );
+		isUserScrollable = /(scroll|auto)/.test( c.css( "overflow" ) );
 
 		this.containment = [
 			( parseInt( c.css( "borderLeftWidth" ), 10 ) || 0 ) + ( parseInt( c.css( "paddingLeft" ), 10 ) || 0 ),
 			( parseInt( c.css( "borderTopWidth" ), 10 ) || 0 ) + ( parseInt( c.css( "paddingTop" ), 10 ) || 0 ),
-			( isالمستخدمينcrollable ? Math.max( ce.scrollWidth, ce.offsetWidth ) : ce.offsetWidth ) -
+			( isUserScrollable ? Math.max( ce.scrollWidth, ce.offsetWidth ) : ce.offsetWidth ) -
 				( parseInt( c.css( "borderRightWidth" ), 10 ) || 0 ) -
 				( parseInt( c.css( "paddingRight" ), 10 ) || 0 ) -
 				this.helperProportions.width -
 				this.margins.left -
 				this.margins.right,
-			( isالمستخدمينcrollable ? Math.max( ce.scrollHeight, ce.offsetHeight ) : ce.offsetHeight ) -
+			( isUserScrollable ? Math.max( ce.scrollHeight, ce.offsetHeight ) : ce.offsetHeight ) -
 				( parseInt( c.css( "borderBottomWidth" ), 10 ) || 0 ) -
 				( parseInt( c.css( "paddingBottom" ), 10 ) || 0 ) -
 				this.helperProportions.height -
@@ -12627,7 +12627,7 @@ var selectmenu = $.widget( "ui.selectmenu", {
 				case $.ui.keyCode.RIGHT:
 					this._move( "next", event );
 					break;
-				case $.ui.keyCode.المنزل:
+				case $.ui.keyCode.HOME:
 				case $.ui.keyCode.PAGE_UP:
 					this._move( "first", event );
 					break;
@@ -13403,7 +13403,7 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 				index = $( event.target ).data( "ui-slider-handle-index" );
 
 			switch ( event.keyCode ) {
-				case $.ui.keyCode.المنزل:
+				case $.ui.keyCode.HOME:
 				case $.ui.keyCode.END:
 				case $.ui.keyCode.PAGE_UP:
 				case $.ui.keyCode.PAGE_DOWN:
@@ -13431,7 +13431,7 @@ var slider = $.widget( "ui.slider", $.ui.mouse, {
 			}
 
 			switch ( event.keyCode ) {
-				case $.ui.keyCode.المنزل:
+				case $.ui.keyCode.HOME:
 					newVal = this._valueMin();
 					break;
 				case $.ui.keyCode.END:
@@ -15430,7 +15430,7 @@ var tabs = $.widget( "ui.tabs", {
 			case $.ui.keyCode.END:
 				selectedIndex = this.anchors.length - 1;
 				break;
-			case $.ui.keyCode.المنزل:
+			case $.ui.keyCode.HOME:
 				selectedIndex = 0;
 				break;
 			case $.ui.keyCode.SPACE:
@@ -15635,7 +15635,7 @@ var tabs = $.widget( "ui.tabs", {
 			.addClass( "ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" )
 			.attr( "role", "tablist" )
 
-			// Prevent المستخدمين from focusing disabled tabs via click
+			// Prevent users from focusing disabled tabs via click
 			.delegate( "> li", "mousedown" + this.eventNamespace, function( event ) {
 				if ( $( this ).is( ".ui-state-disabled" ) ) {
 					event.preventDefault();
@@ -15952,7 +15952,7 @@ var tabs = $.widget( "ui.tabs", {
 	},
 
 	_getIndex: function( index ) {
-		// meta-function to give المستخدمين option to provide a href string instead of a numerical index.
+		// meta-function to give users option to provide a href string instead of a numerical index.
 		if ( typeof index === "string" ) {
 			index = this.anchors.index( this.anchors.filter( "[href$='" + index + "']" ) );
 		}

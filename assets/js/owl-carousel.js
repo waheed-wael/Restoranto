@@ -2176,7 +2176,7 @@
 		 * @protected
 		 * @type {Object}
 		 */
-		this._الفيديوهات = {};
+		this._videos = {};
 
 		/**
 		 * Current playing item.
@@ -2276,13 +2276,13 @@
 					https://youtu.be/:id
 					https://vimeo.com/:id
 					https://vimeo.com/channels/:channel/:id
-					https://vimeo.com/groups/:group/الفيديوهات/:id
-					https://app.vzaar.com/الفيديوهات/:id
+					https://vimeo.com/groups/:group/videos/:id
+					https://app.vzaar.com/videos/:id
 
-					Visual example: https://regexper.com/#(http%3A%7Chttps%3A%7C)%5C%2F%5C%2F(player.%7Cwww.%7Capp.)%3F(vimeo%5C.com%7Cyoutu(be%5C.com%7C%5C.be%7Cbe%5C.googleapis%5C.com)%7Cvzaar%5C.com)%5C%2F(video%5C%2F%7Cالفيديوهات%5C%2F%7Cembed%5C%2F%7Cchannels%5C%2F.%2B%5C%2F%7Cgroups%5C%2F.%2B%5C%2F%7Cwatch%5C%3Fv%3D%7Cv%5C%2F)%3F(%5BA-Za-z0-9._%25-%5D*)(%5C%26%5CS%2B)%3F
+					Visual example: https://regexper.com/#(http%3A%7Chttps%3A%7C)%5C%2F%5C%2F(player.%7Cwww.%7Capp.)%3F(vimeo%5C.com%7Cyoutu(be%5C.com%7C%5C.be%7Cbe%5C.googleapis%5C.com)%7Cvzaar%5C.com)%5C%2F(video%5C%2F%7Cvideos%5C%2F%7Cembed%5C%2F%7Cchannels%5C%2F.%2B%5C%2F%7Cgroups%5C%2F.%2B%5C%2F%7Cwatch%5C%3Fv%3D%7Cv%5C%2F)%3F(%5BA-Za-z0-9._%25-%5D*)(%5C%26%5CS%2B)%3F
 			*/
 
-			id = url.match(/(http:|https:|)\/\/(player.|www.|app.)?(vimeo\.com|youtu(be\.com|\.be|be\.googleapis\.com|be\-nocookie\.com)|vzaar\.com)\/(video\/|الفيديوهات\/|embed\/|channels\/.+\/|groups\/.+\/|watch\?v=|v\/)?([A-Za-z0-9._%-]*)(\&\S+)?/);
+			id = url.match(/(http:|https:|)\/\/(player.|www.|app.)?(vimeo\.com|youtu(be\.com|\.be|be\.googleapis\.com|be\-nocookie\.com)|vzaar\.com)\/(video\/|videos\/|embed\/|channels\/.+\/|groups\/.+\/|watch\?v=|v\/)?([A-Za-z0-9._%-]*)(\&\S+)?/);
 
 			if (id[3].indexOf('youtu') > -1) {
 				type = 'youtube';
@@ -2298,7 +2298,7 @@
 			throw new Error('Missing video URL.');
 		}
 
-		this._الفيديوهات[url] = {
+		this._videos[url] = {
 			type: type,
 			id: id,
 			width: width,
@@ -2307,7 +2307,7 @@
 
 		item.attr('data-video', url);
 
-		this.thumbnail(target, this._الفيديوهات[url]);
+		this.thumbnail(target, this._videos[url]);
 	};
 
 	/**
@@ -2379,7 +2379,7 @@
 		} else if (video.type === 'vzaar') {
 			$.ajax({
 				type: 'GET',
-				url: '//vzaar.com/api/الفيديوهات/' + video.id + '.json',
+				url: '//vzaar.com/api/videos/' + video.id + '.json',
 				jsonp: 'callback',
 				dataType: 'jsonp',
 				success: function(data) {
@@ -2411,7 +2411,7 @@
 	Video.prototype.play = function(event) {
 		var target = $(event.target),
 			item = target.closest('.' + this._core.settings.itemClass),
-			video = this._الفيديوهات[item.attr('data-video')],
+			video = this._videos[item.attr('data-video')],
 			width = video.width || '100%',
 			height = video.height || this._core.$stage.height(),
 			html,
