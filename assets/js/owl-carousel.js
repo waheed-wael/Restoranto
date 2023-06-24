@@ -185,6 +185,7 @@
 	 */
 	Owl.Defaults = {
 		items: 3,
+		rtl:true,
 		loop: false,
 		center: false,
 		rewind: false,
@@ -2962,11 +2963,13 @@
 	 */
 	Navigation.Defaults = {
 		nav: false,
+		rtl:true,
 		navText: [
 			'<span aria-label="' + 'Previous' + '">&#x2039;</span>',
 			'<span aria-label="' + 'Next' + '">&#x203a;</span>'
 		],
 		navSpeed: false,
+		rtl:true,
 		navElement: 'button type="button" role="presentation"',
 		navContainer: false,
 		navContainerClass: 'owl-nav',
@@ -2975,6 +2978,7 @@
 			'owl-next'
 		],
 		slideBy: 1,
+		rtl:true,
 		dotClass: 'owl-dot',
 		dotsClass: 'owl-dots',
 		dots: true,
