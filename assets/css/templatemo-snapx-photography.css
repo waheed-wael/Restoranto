@@ -123,13 +123,14 @@ body {
 }
 
 ::selection {
-  background: #00bdfe;
-  color: #fff;
+  /* background: #00bdfe; */
+  color: #c2dedc;
+
 }
 
 ::-moz-selection {
-  background: #00bdfe;
-  color: #fff;
+  
+  color: #c2dedc;
 }
 
 @media (max-width: 991px) {
@@ -146,6 +147,30 @@ body {
   .mobile-bottom-fix-big {
     margin-bottom: 60px;
   }
+}
+.border-butto a {
+  font-size: 15px;
+  color: #c2dedc;
+  background-color: transparent;
+  border: 1px solid #116A7B;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 10px;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin: auto;
+  padding: 10px 100px;
+  text-align: center!important;
 }
 
 .border-button a {
@@ -164,13 +189,16 @@ body {
   -moz-transition: all .3s;
   -ms-transition: all .3s;
   -o-transition: all .3s;
-  -webkit-border-radius:;
-  -moz-border-radius:;
-  -ms-border-radius:;
-  -o-border-radius:;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .border-button a:hover {
+  background-color: #437B91;
+}
+.border-butto a:hover {
   background-color: #437B91;
 }
 
@@ -348,12 +376,12 @@ Header Style
 
 .header-area .main-nav .nav li:hover a,
 .header-area .main-nav .nav li a.active {
-  color: #5e4242;
+  color: #a8c2cc;
 }
 
 .background-header .main-nav .nav li:hover a,
 .background-header .main-nav .nav li a.active {
-  color: #fff;
+  color: #161010;
   opacity: 1;
 }
 
@@ -396,8 +424,8 @@ Header Style
 .header-area .main-nav .nav li.has-sub ul.sub-menu li a {
   opacity: 1;
   display: block;
-  background: #1F6E8C;
-  color:white!important;
+  background-color: #2E8A99;
+  color: white!important;
   padding-left: 20px;
   height: 40px;
   line-height: 40px;
@@ -409,11 +437,12 @@ Header Style
   font-size: 13px;
   font-weight: 400;
   border-bottom: 1px solid #1F6E8C;
+  -ms-transition: all 0.3s ease 0s;
 }
 
 .header-area .main-nav .nav li.has-sub ul li a:hover {
-  background: #fff;
-  color: #00bdfe!important;
+  background-color: #437B91;
+  color: #bacdd4;
   padding-left: 25px;
 }
 
@@ -585,7 +614,7 @@ Header Style
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #00bdfe!important;
+    
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -646,7 +675,7 @@ Header Style
   }
   .header-area .main-nav .nav li a:hover {
     background: #eee !important;
-    color: #00bdfe!important;
+    
   }
   .header-area .main-nav .nav li.has-sub ul.sub-menu {
     position: relative;
@@ -725,11 +754,11 @@ section.popupBody {
 }
 
 .btn:hover {
-  background: #E4E4E2;
+  background: rgb(218, 181, 181);
 }
 
 .btn_red:hover {
-  color: #2a2a2a;
+  color: rgb(218, 181, 181);
   background: #E4E4E2;
 }
 
@@ -793,7 +822,6 @@ a.btn_red {
 
 .social_login .icon {
   display: inline-block;
-  
   padding: 5px 10px;
   margin-right: 10px;
   float: left;
@@ -824,7 +852,7 @@ a.btn_red {
 }
 
 .centeredText {
-  color: #afafaf;
+ color: #c2dedc;
   text-align: center;
   margin: 20px 0;
   clear: both;
@@ -833,7 +861,7 @@ a.btn_red {
 }
 
 .user_login label {
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 .action_btns {
@@ -898,7 +926,7 @@ a.btn_red {
 }
 
 .user_register label {
-  color: #afafaf;
+ color: #c2dedc;
   display: block;
   margin-bottom: 5px;
 }
@@ -922,7 +950,7 @@ a.btn_red {
 
 .user_register input[type="checkbox"]+label {
   float: left;
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 .user_register .checkbox {
@@ -958,7 +986,7 @@ Banner Style
 
 .main-banner h2 em {
   font-style: normal;
-  color: #0E2954;
+  color: rgb(218, 181, 181);
 }
 
 .main-banner p {
@@ -991,7 +1019,7 @@ Banner Style
 
 .main-banner .big-border-button a:hover {
   background-color: #2E8A99;
-  color: #0E2954;
+  color: #d3d8df;
 }
 
 .main-banner .icon-button a {
@@ -1000,7 +1028,7 @@ Banner Style
   margin-left: 15px;
   font-size: 15px;
   font-weight: 500;
-  color: #fff;
+  color: #ffffff;
   transition: all .3s;
 }
 
@@ -1010,7 +1038,8 @@ Banner Style
 }
 
 .main-banner .icon-button a:hover {
-  color: #0E2954;
+  color: #437B91;
+  
 }
 
 
@@ -1074,13 +1103,13 @@ section.featured-items {
 .featured-items .item .thumb .hover-effect .content h4 span {
   font-size: 14px;
   font-weight: 500;
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 .featured-items .item .thumb .hover-effect .content ul li {
   font-size: 15px;
   font-weight: 400;
-  color: #afafaf;
+ color: #c2dedc;
   margin-bottom: 7px;
 }
 
@@ -1136,11 +1165,11 @@ popular فئات
 ---------------------------------------------
 */ 
 
-section.popular-فئات {
+section.popular-categories {
   padding: 0px 65px;
 }
 
-section.popular-فئات .main-button {
+section.popular-categories .main-button {
   text-align: right;
 }
 
@@ -1192,7 +1221,7 @@ section.popular-فئات .main-button {
 }
 
 .popular-item span {
-  color: #afafaf;
+ color: #c2dedc;
   font-weight: 400;
 }
 
@@ -1255,7 +1284,7 @@ closed مسابقات
 ---------------------------------------------
 */ 
 
-section.closed-مسابقات {
+section.closed-contests {
   background-image: url(../images/closed-bg.jpg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -1285,10 +1314,14 @@ section.closed-مسابقات {
   padding: 8px 12px;
   opacity: 0;
   transition: all .3s;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .closed-item .thumb span.winner em {
-  color: #afafaf;
+ color: #c2dedc;
   font-style: normal;
 }
 
@@ -1307,7 +1340,7 @@ section.closed-مسابقات {
 }
 
 .closed-item .thumb span.price em {
-  color: #afafaf;
+ color: #c2dedc;
   font-style: normal;
 }
 
@@ -1335,46 +1368,46 @@ section.closed-مسابقات {
 
 .closed-item .down-content h4 span {
   font-size: 15px;
-  color: #afafaf;
+ color: #c2dedc;
 }
 
-.closed-مسابقات .owl-nav {
+.closed-contests .owl-nav {
   position: absolute;
   width: 100%;
   top: 50%;
   transform: translateY(-35px);
 }
 
-.closed-مسابقات .owl-nav .owl-prev {
+.closed-contests .owl-nav .owl-prev {
   position: absolute;
   left: -70px;
 }
 
-.closed-مسابقات .owl-nav .owl-next {
+.closed-contests .owl-nav .owl-next {
   position: absolute;
   right: -70px;
 }
 
-.closed-مسابقات .owl-nav .owl-prev span,
-.closed-مسابقات .owl-nav .owl-next span  {
+.closed-contests .owl-nav .owl-prev span,
+.closed-contests .owl-nav .owl-next span  {
   width: 46px;
   height: 46px;
   line-height: 46px;
   font-size: 24px;
   display: inline-block;
-  color: #afafaf;
+ color: #c2dedc;
   background-color: #2E8A99;
   border-radius: 50%;
   transition: all .3s;
 }
 
-.closed-مسابقات .owl-nav .owl-prev span:hover,
-.closed-مسابقات .owl-nav .owl-next span:hover {
+.closed-contests .owl-nav .owl-prev span:hover,
+.closed-contests .owl-nav .owl-next span:hover {
   background-color: #2E8A99;
   color: #fff;
 }
 
-.closed-مسابقات .border-button {
+.closed-contests .border-button {
   margin-top: 20px;
 }
 
@@ -1424,12 +1457,12 @@ pricing-plans
 
 .pricing-item ul.first-plan li:nth-child(5),
 .pricing-item ul.first-plan li:nth-child(4) {
-  color: #afafaf;
+ color: #c2dedc;
   text-decoration: line-through;
 }
 
 .pricing-item ul.second-plan li:nth-child(5) {
-  color: #afafaf;
+ color: #c2dedc;
   text-decoration: line-through;
 }
 
@@ -1509,7 +1542,7 @@ page heading
 
 .page-heading h2 em {
   font-style: normal;
-  color: #0E2954;
+  color: rgb(218, 181, 181);
 }
 
 .page-heading p {
@@ -1592,19 +1625,19 @@ page heading
   outline: none;
   padding: 0px 15px;
   font-size: 15px;
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 #search-form input::placeholder {
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 #search-form button {
   margin-top: 30px;
   font-size: 15px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 189, 254);
-  border: 1px solid rgb(0, 189, 254);
+ color: #c2dedc;
+  background-color: transparent;
+   border: 1px solid #116A7B;
   padding: 10px 30px;
   display: inline-block;
   border-radius: 10px;
@@ -1615,8 +1648,7 @@ page heading
 }
 
 #search-form button:hover {
-  background-color: transparent;
-  color: #0E2954;
+  background-color: #437B91;
 }
 
 .photos-الفيديوهات .item {
@@ -1673,14 +1705,14 @@ page heading
   display: inline;
   float: right;
   margin-top: 5px;
-  color: #afafaf;
+ color: #c2dedc;
   font-weight: 400;
   font-size: 15px;
 }
 
 .photos-الفيديوهات .item .down-content h2 {
   font-size: 20px;
-  color: #afafaf;
+ color: #c2dedc;
   font-weight: 700;
   margin-top: 20px;
   margin-left: 30px;
@@ -1743,7 +1775,7 @@ page heading
 .contest-win .contest-item span.participants {
   font-size: 15px;
   font-weight: 500;
-  color: #afafaf;
+ color: #c2dedc;
   flex-basis: 50%;
 }
 
@@ -1756,7 +1788,7 @@ page heading
 .contest-win .contest-item span.submittions {
   font-size: 15px;
   font-weight: 500;
-  color: #afafaf;
+ color: #c2dedc;
   flex-basis: 50%;
   display: inline-block;
   text-align: right;
@@ -1782,7 +1814,7 @@ page heading
   font-size: 15px;
   display: inline-block;
   text-align: center;
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 .contest-win ul.pagination {
@@ -1853,7 +1885,7 @@ Contest Details Page
 
 .contest-details .top-content ul li span {
   font-size: 15px;
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 .contest-details .top-content span.open {
@@ -1944,7 +1976,7 @@ Contest Details Page
 .contest-details .main-content .item h6 {
   font-size: 15px;
   font-weight: 400;
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 .contest-details .main-content .main-button {
@@ -1992,7 +2024,7 @@ Contest Details Page
 .contest-waiting .waiting-item .down-content span.deadline {
   font-size: 15px;
   font-weight: 500;
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 .contest-waiting .waiting-item .down-content span.deadline {
@@ -2045,11 +2077,11 @@ Contest Details Page
 --------------------------------------------- 
 */
 
-.top-فئات {
+.top-categories {
   margin-top: -100px;
 }
 
-.top-فئات .item {
+.top-categories .item {
   text-align: center;
   background-color: #2E8A99;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -2057,7 +2089,7 @@ Contest Details Page
   padding: 30px;
 }
 
-.top-فئات .item .icon {
+.top-categories .item .icon {
   background-color: #f7f7f7;
   width: 75px;
   height: 75px;
@@ -2067,25 +2099,25 @@ Contest Details Page
   border-radius: 10px;
 }
 
-.top-فئات .item .icon img {
+.top-categories .item .icon img {
   max-width: 36px;
   border-radius: 0px;
 }
 
-.top-فئات .item h4 {
+.top-categories .item h4 {
   font-size: 20px;
   font-weight: 700;
   margin-top: 15px;
   margin-bottom: 10px;
 }
 
-.top-فئات .item span {
+.top-categories .item span {
   font-size: 15px;
-  color: #afafaf;
+ color: #c2dedc;
   display: block;
 }
 
-.top-فئات .item span.counter {
+.top-categories .item span.counter {
   margin-top: 10px;
   font-style: normal;
   font-size: 15px;
@@ -2100,42 +2132,42 @@ Contest Details Page
   margin-right: 10px;
 }
 
-.featured-مسابقات .item  {
+.featured-contests .item  {
   margin-bottom: 30px;
 }
 
-.featured-مسابقات .item .thumb {
+.featured-contests .item .thumb {
   position: relative;
   overflow: hidden;
 }
 
-.featured-مسابقات .item .thumb  img {
+.featured-contests .item .thumb  img {
   border-radius: 15px;
 }
 
-.featured-مسابقات .item .hover-effect {
+.featured-contests .item .hover-effect {
   position: absolute;
   right: -100%;
   bottom: 15px;
   transition: all .5s;
 }
 
-.featured-مسابقات .item .thumb:hover .hover-effect {
+.featured-contests .item .thumb:hover .hover-effect {
   right: 15px;
   bottom: 15px;
 }
 
-.featured-مسابقات .item .hover-effect .content {
+.featured-contests .item .hover-effect .content {
   background-color: #2E8A99;
   border-radius: 15px;
   padding: 25px 20px;
 }
 
-.featured-مسابقات .item .hover-effect .content .top-content {
+.featured-contests .item .hover-effect .content .top-content {
   margin-bottom: 20px;
 }
 
-.featured-مسابقات .item .hover-effect .content .top-content span.award {
+.featured-contests .item .hover-effect .content .top-content span.award {
   font-size: 15px;
   color: #fff;
   background-color: #2E8A99;
@@ -2143,73 +2175,73 @@ Contest Details Page
   padding: 8px 12px;;
 }
 
-.featured-مسابقات .item .hover-effect .content .top-content span.price {
+.featured-contests .item .hover-effect .content .top-content span.price {
   float: right;
   font-size: 20px;
   font-weight: 700;
   color: #0E2954;
 }
 
-.featured-مسابقات .item .hover-effect .content h4 {
+.featured-contests .item .hover-effect .content h4 {
   font-size: 18px;
   font-weight: 700;
   margin-top: 25px;
   margin-bottom: 20px;
 }
 
-.featured-مسابقات .item .hover-effect .content img {
+.featured-contests .item .hover-effect .content img {
   border-radius: 15px;
 }
 
-.featured-مسابقات .item .hover-effect .content .info {
+.featured-contests .item .hover-effect .content .info {
   display: flex;
   width: 100%;
 }
 
-.featured-مسابقات .item .hover-effect .content span.participants {
+.featured-contests .item .hover-effect .content span.participants {
   font-size: 13px;
   font-weight: 500;
-  color: #afafaf;
+ color: #c2dedc;
   flex-basis: 50%;
 }
 
-.featured-مسابقات .item .hover-effect .content span.participants img {
+.featured-contests .item .hover-effect .content span.participants img {
   border-radius: 0px;
   max-width: 24px;
   margin-bottom: 8px;
 }
 
-.featured-مسابقات .item .hover-effect .content span.submittions {
+.featured-contests .item .hover-effect .content span.submittions {
   font-size: 15px;
   font-weight: 500;
-  color: #afafaf;
+ color: #c2dedc;
   flex-basis: 50%;
   display: inline-block;
   text-align: right;
 }
 
-.featured-مسابقات .item .hover-effect .content span.submittions img {
+.featured-contests .item .hover-effect .content span.submittions img {
   border-radius: 0px;
   max-width: 24px;
   margin-bottom: 8px;
 }
 
-.featured-مسابقات .item .hover-effect .content .border-button {
+.featured-contests .item .hover-effect .content .border-button {
   margin-top: 15px;
   margin-bottom: 0px;
 }
 
-.featured-مسابقات .item .hover-effect .content .border-button a {
+.featured-contests .item .hover-effect .content .border-button a {
   width: 100%;
   text-align: center;
   padding: 10px 20px;
 }
 
-.featured-مسابقات .item .hover-effect .content span.info {
+.featured-contests .item .hover-effect .content span.info {
   font-size: 15px;
   display: inline-block;
   text-align: center;
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 .testimonials {
@@ -2238,7 +2270,7 @@ Contest Details Page
 .testimonials .item p {
   font-size: 20px;
   font-weight: 600;
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 .testimonials .item .content .left-content {
@@ -2258,7 +2290,7 @@ Contest Details Page
 .testimonials .item .content .left-content span {
   display: block;
   font-size: 15px;
-  color: #afafaf;
+ color: #c2dedc;
 }
 
 .testimonials .owl-dots {
@@ -2325,7 +2357,7 @@ Contest Details Page
 
 .user-info .info span {
   font-size: 15px;
-  color: #afafaf;
+ color: #c2dedc;
   display: block;
   margin-top: 5px;
 }
@@ -2554,11 +2586,11 @@ body {
     margin-right: 0px;
   }
   .featured-items .owl-nav .owl-next,
-  .closed-مسابقات .owl-nav .owl-next {
+  .closed-contests .owl-nav .owl-next {
     right: -10px !important;
   }
   .featured-items .owl-nav .owl-prev,
-  .closed-مسابقات .owl-nav .owl-prev {
+  .closed-contests .owl-nav .owl-prev {
     left: -10px !important;
   }
 }
@@ -2586,11 +2618,11 @@ body {
   .section-heading {
     text-align: center;
   }
-  section.popular-فئات .main-button {
+  section.popular-categories .main-button {
     text-align: center;
     margin-top: -30px;
   }
-  section.popular-فئات .popular-item {
+  section.popular-categories .popular-item {
     margin-top: 30px;
   }
   .contest-win .contest-item {
@@ -2615,32 +2647,51 @@ body {
   .contest-waiting .waiting-item {
     margin-bottom: 30px;
   }
-  .top-فئات .item,
+  .top-categories .item,
   section.contact-us .info-item {
     margin-bottom: 15px;
   }
-  section.popular-فئات,
+  section.popular-categories,
   .contest-win {
     padding: 0px;
   }
   .pricing-item {
     margin-bottom: 15px;
   }
-  .featured-مسابقات .item .hover-effect .content .info {
+  .featured-contests .item .hover-effect .content .info {
     display: flex !important;
   }
 }
 
 @media (max-width: 1200px) {
   .featured-items .owl-nav .owl-next,
-  .closed-مسابقات .owl-nav .owl-next {
+  .closed-contests .owl-nav .owl-next {
     right: -25px;
   }
   .featured-items .owl-nav .owl-prev,
-  .closed-مسابقات .owl-nav .owl-prev {
+  .closed-contests .owl-nav .owl-prev {
     left: -25px;
   }
-  .featured-مسابقات .item .hover-effect .content .info {
+  .featured-contests .item .hover-effect .content .info {
     display: none;
   }
+}
+
+
+@media screen and (max-width: 600px) {
+  .border-button a {
+    display: none!important;
+  }
+  .header-area .main-nav .nav li.has-sub ul.sub-menu li a {
+   
+    background-color:rgb(15, 10, 10);
+    color: #000!important;
+    
+  
+  }
+
+  .featured-contests .item .hover-effect .content .info {
+    display: none;
+  }
+
 }
