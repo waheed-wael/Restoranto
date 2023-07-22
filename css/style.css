@@ -407,6 +407,11 @@
     transition: .5s;
 }
 
+
+.row g-5{
+    text-align-last: right;
+}
+
 .testimonial-carousel .owl-dot.active {
     background: var(--primary);
     border-color: var(--primary);
@@ -441,6 +446,7 @@
     font-weight: normal;
     text-transform: capitalize;
     transition: .3s;
+    text-align-last: right;
 }
 
 .footer .btn.btn-link::before {
